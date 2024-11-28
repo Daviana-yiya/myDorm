@@ -22,14 +22,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
-            justify-items: center; /* 添加这一行 */
+            justify-items: center;
         }
         button {
-            padding: 10px 30px; /* 减小按钮的高度，增加宽度 */
-            font-size: 16px; /* 减小字体大小 */
+            padding: 10px 30px;
+            font-size: 16px;
             color: white;
-            background: linear-gradient(to right, #ffb75d, #ed8f90); /* 浅粉色渐变 */
-            border: none; /* 去掉边框 */
+            background: linear-gradient(to right, #ffb75d, #ed8f90);
+            border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -37,22 +37,48 @@
         button:hover {
             transform: scale(1.05);
         }
+   
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 24px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .floating-button:hover {
+            transform: scale(1.1);
+            background-color: #ff6700;
+        }
     </style>
 </head>
 <body style="background-image: url('img/background1.jpg'); background-size: 1750px;background-repeat: no-repeat">
-    <!-- Header Section -->
+
     <header>
         <h1>欢迎来到1809小屋</h1>
     </header>
-    <!-- Button Section -->
+
     <div class="buttons-section">
         <div class="button-container">
-            <!-- 把寝室发给你的链接换成各寝室发给你的链接，网站 1....网站 7 -->
-            <a href="https://website2.com"><button>周琬琦</button></a>
-            <a href="https://gitee.com/wishmylifebetter/MyWeb/blob/master/web/index.html"><button>和景怡</button></a>
-            <a href="https://website4.com"><button>公羽舒</button></a>
-            <a href="https://website5.com"><button>刘潇月</button></a>
+            <a href="https://daviana-yiya.github.io/myWeb/"><button>周琬琦</button></a>
+            <a href="https://gin000616.github.io/index.html"><button>公羽舒</button></a>
+            <a href="https://lgywawmy.github.io/index.html"><button>刘潇月</button></a>
+            <a href="https://wishmylifebetter.github.io/"><button>和景怡</button></a>
         </div>
     </div>
+
+    <a href="https://your-class-webpage.com" title="返回班级页面">
+        <div class="floating-button">↩</div>
+    </a >
 </body>
 </html>
